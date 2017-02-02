@@ -19,7 +19,7 @@ for iter = 1:num_iters
 
     h = X * theta;
 
-    temp1 = theta(1) - alpha * (1/m) * sum(h - y);
+    temp1 = theta(1) - alpha * (1/m) * sum(h - y) .* X(:,1));
     temp2 = theta(2) - alpha * (1/m) * sum((h - y) .* X(:,2));
     theta(1) = temp1;
     theta(2) = temp2;
